@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">W</div>
+      <div>
+        <h1>Simple Weather App</h1>
+        <p class="lead">Enter a city and get current weather (OpenWeather API)</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="controls">
+        <input id="cityInput" type="text" placeholder="e.g. Manila, Tokyo, London" />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div id="output">
+        <div class="result" style="opacity:0.3">
+          <div class="meta">
+            <div class="city">—</div>
+            <div class="desc">Weather description</div>
+            <div class="metrics">
+              <div class="metric"><b>—</b><small>Temperature (°C)</small></div>
+              <div class="metric"><b>—</b><small>Humidity (%)</small></div>
+              <div class="metric"><b>—</b><small>Sea level (m)</small></div>
+            </div>
+          </div>
+
+          <div class="icon-wrap">
+            <div class="temp">—</div>
+            <img src="" alt="weather icon" />
+            <small id="iconText" style="color:var(--muted)">—</small>
+          </div>
+        </div>
+        <div id="error" class="error" style="display:none"></div>
+      </div>
+
+      <p class="note">
+        Tip: If 'sea level' is not shown for a city, the dataset didn't include it.
+      </p>
+    </div>
+
+    <footer>Powered by OpenWeather.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
